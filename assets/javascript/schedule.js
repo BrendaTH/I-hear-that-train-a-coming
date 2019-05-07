@@ -114,6 +114,16 @@ database.ref().on("child_added", function(snapshot) {
     // Append the new row to the table
     $("#schedule-table > tbody").append(newRow);
 
+
+    // udpate the most next train to arrive
+    if (parseInt(minutesAway) < parseInt($('#minutes-away-display').text())) {
+        $("#name-display").text(sv.name);
+        $("#destination-display").text(sv.destination);
+        $("#frequency-display").text(sv.frequency);
+        $("#next-arrival-display").text(arrivalTime);
+        $("#minutes-away-display").text(minutesAway);
+    }
+
     // Handle the errors
   }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);

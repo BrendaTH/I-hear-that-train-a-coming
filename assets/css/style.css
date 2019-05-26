@@ -16,3 +16,7 @@
 .stencil-font {
     font-family: 'Allerta Stencil', sans-serif;
 }
+
+.bigger-font{
+    font-size: 1.25rem;
+}

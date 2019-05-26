@@ -7,8 +7,9 @@
   <title>Train Schedule</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-    crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" -->
+    <!-- crossorigin="anonymous"> -->
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
   <!-- local css -->
@@ -17,18 +18,18 @@
 
 <body>
 
-        <div class="container">
+    <div class="container">
       
           <br>
       
           <!-- Jumbotron -->
-        <div class="jumbotron jumbotron-fluid text-primary">
+        <div class="jumbotron jumbotron-fluid">
             <div class="container stencil-font">
-                <h1 class="text-center">Train Schedule </h1>
-                <p class="lead text-center">I hear that train acomin; it's rollin' 'round the bend,</p>
+                <h1 class="text-center display-2">Train Schedule </h1>
+                <p class="lead text-center display-4">I hear that train a-comin; <br> it's rollin' 'round the bend,</p>
             </div>
         </div>
-        <table class="table stencil-font" id="schedule-table">
+        <table class="table stencil-font bigger-font" id="schedule-table">
                 <thead>
                   <tr>
                       <th scope="col">#</th>
@@ -41,46 +42,52 @@
                 </thead>
                 <tbody id="table-body">
                 </tbody>
-              </table>
+        </table>
 
-
-
-          <div class="row">
-      
+          
             <!-- Sign-Up Card-->
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header">
-                  Add New Train Schedule
-                </div>
-                <div class="card-body">
-      
-                  <!-- Train Schedule Form -->
-                  <form role="form">
-                      <div class="form-group">
-                        <label for="name-input">Train Name</label>
-                        <input class="form-control" id="name-input" type="text" placeholder="Train Name">
-                      </div>
-                      <div class="form-group">
-                        <label for="destination-input">Destination</label>
-                        <input class="form-control" id="destination-input" type="text" placeholder="Destination">
-                      </div>
-                      <div class="form-group">
-                        <label for="first-train-time-input">First Train Time (HH:mm - 24 hour clock)</label>
-                        <input class="form-control" id="first-train-time-input" type="text" placeholder="First Arrival">
-                      </div>
-                      <div class="form-group">
-                        <label for="frequency-input">Frequency (min)</label>
-                        <input class="form-control" id="frequency-input" type="number" placeholder="Frequency">
-                      </div>
-                      <button class="btn btn-default" id="add-user" type="submit">Submit</button>
-                    </form>
+            
+            <div class="card">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card-header bigger-font">
+                    Add New Train Schedule
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+              <div class="card-body">
+                  <!-- ******************** T R A I N   S C H E D U L E   F O R M ********************************** -->
+                  <form class='bigger-font'>
+                      <div class="form-row">
+                        <div class="col-md-9 mb-3">
+                          <label for="name-input">Train Name</label>
+                          <input type="text" class="form-control" id="name-input" placeholder="Train Name" placeholder="Train Name" required>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-9 mb-3">
+                          <label for="destination-input">Destination</label>
+                          <input type="text" class="form-control" id="destination-input" placeholder="Destination" required>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                          <label for="first-train-time-input">First Train Time (HH:mm - 24 hour clock)</label>
+                          <input type="text" class="form-control" id="first-train-time-input" placeholder="First Arrival" required>
+                        </div>
+                        <div class='col-md-6 mb-3'>
+                          <label for='frequency-input'>Frequency (min)</label>
+                          <input type='text' class='form-control' id='frequency-input' placeholder='Frequency' required>
+                        </div>
+                      </div>
+                    <button class="btn btn-lg btn-primary" type="submit">Submit form</button>
+                  </form>
+              </div> <!-- close card body -->
+            </div> <!-- close card -->
+    </div> <!-- close container -->
       
-        </div>
       
         <!-- jQuery -->
         <!-- <script src="https://code.jquery.com/jquery.js"></script> -->

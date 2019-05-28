@@ -21,7 +21,9 @@ Technology used for this app include:
 * interval timer - fires once a minute and updates the train schedule
 * moment - used to calculate Minutes Away and Next Arrival Time.
 
-
+## Future Enhancements
+* Make the schedule into a bootstrap grid
+s
 To get started go [https://brendath.github.io/I-hear-that-train-a-coming/](https://brendath.github.io/I-hear-that-train-a-coming)
 
 

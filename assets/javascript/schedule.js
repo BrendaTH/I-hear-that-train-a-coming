@@ -64,8 +64,11 @@ var tbl = {
     }, 
 
     buildTableRow: function (row) {
+        var rowHead = $("<th>").text(++tbl.rowCount);
+        rowHead.attr('scope', 'row');
+         
         var newRow = $("<tr>").append(
-            $("<th>").text(++tbl.rowCount),
+            rowHead,
             $("<td>").text(row.name),
             $("<td>").text(row.destination),
             $("<td>").text(row.frequency),
